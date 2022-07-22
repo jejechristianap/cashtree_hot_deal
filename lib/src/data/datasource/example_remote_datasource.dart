@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cashtree_hot_deal/src/data/providers/remote/api_provider.dart';
 import 'package:cashtree_hot_deal/src/data/model/example_model.dart';
 
@@ -12,10 +14,11 @@ class ExampleRemoteDatasourceImpl extends ExampleRemoteDatasource {
 
   @override
   Future<ExampleModel> exampleCall() async {
-    final Map<String, dynamic> jsonResponse = await apiProvider.get(
-      endPoint: 'todos/1',
-    );
+    log('ExampleRemoteDatasourceImpl exampleCall()');
+    final Map<String, dynamic> jsonResponse =
+        await apiProvider.get(endPoint: 'todos/1', query: {'data': 'string'});
     final data = ExampleModel.fromJson(jsonResponse);
+    log('response: ${data.toJson()}');
     return data;
   }
 }

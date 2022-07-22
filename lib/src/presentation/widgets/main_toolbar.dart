@@ -30,11 +30,12 @@ class MainToolbar extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              ToolbarButton(asset: AppAssets.icMessage, onBellTap: onBellTap),
+              ToolbarButton(
+                  asset: AppAssets.icMessage, onBellTap: onMessageTap),
               const SizedBox(
                 width: 10,
               ),
-              ToolbarButton(asset: AppAssets.icLogin, onBellTap: onBellTap),
+              ToolbarButton(asset: AppAssets.icLogin, onBellTap: onLoginTap),
             ],
           )),
         ],

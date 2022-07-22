@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:cashtree_hot_deal/src/config/assets/app_assets.dart';
+import 'package:cashtree_hot_deal/src/config/route/route_constant.dart';
 import 'package:cashtree_hot_deal/src/config/style/app_colors.dart';
 import 'package:cashtree_hot_deal/src/config/style/app_text_styles.dart';
 import 'package:cashtree_hot_deal/src/presentation/home/home_controller.dart';
@@ -39,6 +40,7 @@ class HomePage extends GetView<HomeController> {
             child: MainToolbar(
               onBellTap: () {
                 log('Bell Tap');
+                controller.testCallDetail();
               },
               onMessageTap: () {
                 log('Message Tap');

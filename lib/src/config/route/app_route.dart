@@ -1,3 +1,5 @@
+import 'package:cashtree_hot_deal/src/presentation/detail/detail_binding.dart';
+import 'package:cashtree_hot_deal/src/presentation/detail/detail_page.dart';
 import 'package:get/get.dart';
 
 import '../../presentation/home/home_binding.dart';
@@ -15,6 +17,11 @@ class AppRoute {
       name: RouteConstant.home,
       binding: HomeBinding(),
       page: () => const HomePage(),
+    ),
+    GetPage(
+      name: RouteConstant.detail,
+      binding: DetailBinding(),
+      page: () => const DetailPage(),
     )
   ];
 }

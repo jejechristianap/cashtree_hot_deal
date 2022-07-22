@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cashtree_hot_deal/src/data/datasource/example_remote_datasource.dart';
 import 'package:cashtree_hot_deal/src/data/model/example_model.dart';
 import 'package:cashtree_hot_deal/src/domain/repository/example_repository.dart';
@@ -9,6 +11,7 @@ class ExampleRepositoryImpl implements ExampleRepository {
 
   @override
   Future<ExampleModel> exampleRepo() async {
+    log('ExampleRepositoryImpl to ExampleRemoteDatasourceImpl ');
     final remoteExample = await exampleRemoteDatasourceImpl.exampleCall();
     return remoteExample;
   }
